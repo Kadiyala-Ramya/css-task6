@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            background-color: #f0f0f0;
+        }
+        .main-container
+        {
+             display: flex;
+             flex-direction:column;
+             gap: 40px;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex-wrap: wrap;
+         }
+         .box1, .box2,.box3,.box4 {
+          height:220px;
+          width:220px;        
+          border: 2px solid black;
+          background-color: white;
+          padding: 10px;
+          gap: 10px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box1 {
+         flex-direction: row;
+         justify-content: start;
+         align-items: start;
+        }
+       .box2 {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        }
+        .box3{
+            flex-direction:row-reverse;
+            justify-content: start;
+            align-items: start;
+        }
+        .box4{
+            flex-direction:column-reverse;
+            justify-content: start;
+            align-items: start;
+        }
+        .btn1,.btn2,.btn3,.btn4
+        {
+            background-color: red;
+            color: white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 6px;
+            
+        }
+        .container2
+        {
+            display:flex;
+            flex-direction: row;
+            gap:10px;
+            flex-wrap: wrap;
+        }
+        .box5, .box6,.box7,.box8 {
+         width: 220px;           
+         height: 220px;          
+         border: 2px solid black;
+         background-color: white;
+         padding: 10px;
+         gap: 10px;
+         display: flex;
+         flex-wrap: wrap;
+        }
+        .box5 {
+         flex-direction: row;
+         justify-content: start;
+         align-items:flex-start;
+        }
+       .box6 {
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        }
+        .box7{
+            flex-direction:row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .box8{
+            display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: stretch;
+           height: 200px; 
+           background: #eee;
+        }
+        .btn5,.btn6,.btn7
+        {
+            background-color: red;
+            color: white;
+            width: 50px;
+            height:50px;
+            border-radius:6px;
+            
+        }
+        .btn8{
+            background-color: red;
+            color: white;
+            width: 50px;
+            border-radius:6px;
+            
+        }
+        
+        .container3
+        {
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+            flex-wrap: wrap;
+        }
+        .box9, .box10,.box11,.box12,.box13, .box14 {
+         width: 220px;           
+         height: 220px;          
+         border: 2px solid black;
+         background-color: white;
+         padding: 10px;
+         gap: 10px;
+         display: flex;
+         flex-wrap: wrap;
+        }
+        .box9{
+         justify-content:flex-start;
+         align-items:stretch;
+        }
+       .box10 {
+        justify-content: center;
+        align-items:stretch;
+        }
+        .box11{
+            justify-content:flex-end;
+            align-items: stretch;
+        }
+        .box12{
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        .box13{
+            justify-content: space-around;
+            align-items: stretch;
+        }
+        .box14{
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+        .btn9,.btn10,.btn11,.btn12, .btn13,.btn14
+        {
+            background-color: red;
+            color: white;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 6px;
+            
+        }
+        .container4
+        {
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+            flex-wrap: wrap;
+        }
+        .box15, .box16,.box17,.box18,.box19, .box20 {
+         width: 220px;           
+         height: 220px;          
+         border: 2px solid black;
+         background-color: white;
+         padding: 10px;
+         gap: 10px;
+         display: flex;
+         flex-wrap: wrap;
+        }
+        .box15{
+         justify-content:start;
+         align-items:start;
+         align-content: flex-start;
+        }
+       .box16{
+        justify-content: start;
+        align-items:start;
+        align-content: center;
+        }
+        .box17{
+            justify-content:start;
+            align-items: start;
+            align-content: flex-end;
+        }
+        .box18{
+            justify-content: center;
+            align-items: stretch;
+            align-content: stretch;
+            height:250px;
+        }
+        .box19{
+            justify-content: start;
+            align-items: start;
+            align-content: space-between;
+        }
+        .box20{
+            justify-content: start;
+            align-items: start;
+            align-content: space-around;
+        }
+        .btn15,.btn16,.btn17, .btn19,.btn20
+        {
+            background-color: red;
+            color: white;
+            width: 50px;
+            height:30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 6px;
+            
+        }
+        .btn18
+        {
+            background-color: red;
+            color: white;
+            width:50px;
+            border-radius: 6px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <div class="container1">
+    <div>
+        <h3>Flex Row Wrap</h3>
+        <div class="box1">
+            <div class="btn1">1</div>
+            <div class="btn1">2</div>
+            <div class="btn1">3</div>
+            <div class="btn1">4</div>
+            <div class="btn1">5</div>
+            <div class="btn1">6</div>
+            <div class="btn1">7</div>
+            <div class="btn1">8</div>
+            <div class="btn1">9</div>
+        </div>
+    </div>
+    <div>
+        <h3>Flex column Wrap</h3>
+        <div class="box2">
+            <div class="btn2">1</div>
+            <div class="btn2">2</div>
+            <div class="btn2">3</div>
+            <div class="btn2">4</div>
+            <div class="btn2">5</div>
+            <div class="btn2">6</div>
+            <div class="btn2">7</div>
+            <div class="btn2">8</div>
+            <div class="btn2">9</div>
+        </div>
+    </div>
+    <div>
+        <h3>Flex row-reverse wrap</h3>
+        <div class="box3">
+            <div class="btn3">1</div>
+            <div class="btn3">2</div>
+            <div class="btn3">3</div>
+            <div class="btn3">4</div>
+            <div class="btn3">5</div>
+            <div class="btn3">6</div>
+            <div class="btn3">7</div>
+            <div class="btn3">8</div>
+            <div class="btn3">9</div>
+        </div>
+    </div>
+    <div>
+        <h3>Flex column-reverse wrap</h3>
+        <div class="box4">
+            <div class="btn4">1</div>
+            <div class="btn4">2</div>
+            <div class="btn4">3</div>
+            <div class="btn4">4</div>
+            <div class="btn4">5</div>
+            <div class="btn4">6</div>
+            <div class="btn4">7</div>
+            <div class="btn4">8</div>
+            <div class="btn4">9</div>
+        </div>
+    </div>
+    </div>
+    <div class="container2">
+        <div>
+            <h3>Align-items flex-start</h3>
+            <div class="box5">
+                <div class="btn5">1</div>
+                <div class="btn5">2</div>
+                <div class="btn5">3</div>
+                
+            </div>
+        </div>
+        <div>
+            <h3>Align-items center</h3>
+            <div class="box6">
+                <div class="btn6">1</div>
+                <div class="btn6">2</div>
+                <div class="btn6">3</div>
+                
+            </div>
+        </div>
+        <div>
+            <h3>Align-items flex-end</h3>
+            <div class="box7">
+                <div class="btn7">1</div>
+                <div class="btn7">2</div>
+                <div class="btn7">3</div>
+            </div>
+        </div>
+        <div>
+            <h3>Align-items stretch</h3>
+            <div class="box8">
+                <div class="btn8">1</div>
+                <div class="btn8">2</div>
+                <div class="btn8">3</div>
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="container3">
+        <div>
+            <h4>Justify-content flex-start</h4>
+            <div class="box9">
+                <div class="btn9">1</div>
+                <div class="btn9">2</div>
+                <div class="btn9">3</div>
+            </div>
+        </div>
+        <div>
+            <h3>Justify-content center</h3>
+            <div class="box10">
+                <div class="btn10">1</div>
+                <div class="btn10">2</div>
+                <div class="btn10">3</div>
+                
+            </div>
+        </div>
+        <div>
+            <h3>Justify-content flex-end</h3>
+            <div class="box11">
+                <div class="btn11">1</div>
+                <div class="btn11">2</div>
+                <div class="btn11">3</div>
+                
+            </div>
+        </div>
+        <div>
+            <h4>Justify-content space-between</h4>
+            <div class="box12">
+                <div class="btn12">1</div>
+                <div class="btn12">2</div>
+                <div class="btn12">3</div>
+                
+            </div>
+        </div>
+        <div>
+            <h4>Justify-content space-around</h4>
+            <div class="box13">
+                <div class="btn13">1</div>
+                <div class="btn13">2</div>
+                <div class="btn13">3</div>
+                
+            </div>
+        </div>
+        <div>
+            <h4>Justify-content space-evenly</h4>
+            <div class="box14">
+                <div class="btn14">1</div>
+                <div class="btn14">2</div>
+                <div class="btn14">3</div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container4">
+        <div>
+            <h3>align-content flex-start</h3>
+            <div class="box15">
+                <div class="btn15">1</div>
+                <div class="btn15">2</div>
+                <div class="btn15">3</div>
+                <div class="btn15">1</div>
+                <div class="btn15">2</div>
+                <div class="btn15">3</div>
+            </div>
+        </div>
+        <div>
+            <h3>align-content center</h3>
+            <div class="box16">
+                <div class="btn16">1</div>
+                <div class="btn16">2</div>
+                <div class="btn16">3</div>
+                <div class="btn16">1</div>
+                <div class="btn16">2</div>
+                <div class="btn16">3</div>
+            </div>
+        </div>
+        <div>
+            <h3>align-content flex-end</h3>
+            <div class="box17">
+                <div class="btn17">1</div>
+                <div class="btn17">2</div>
+                <div class="btn17">3</div>
+                <div class="btn17">1</div>
+                <div class="btn17">2</div>
+                <div class="btn17">3</div>
+            </div>
+        </div>
+        <div>
+            <h3>align-content stretch</h3>
+            <div class="box18">
+                <div class="btn18">1</div>
+                <div class="btn18">2</div>
+                <div class="btn18">3</div>
+                <div class="btn18">1</div>
+                <div class="btn18">2</div>
+                <div class="btn18">3</div>
+            </div>
+        </div>
+        <div>
+            <h4>align-content space-between</h4>
+            <div class="box19">
+                <div class="btn19">1</div>
+                <div class="btn19">2</div>
+                <div class="btn19">3</div>
+                <div class="btn19">1</div>
+                <div class="btn19">2</div>
+                <div class="btn19">3</div>
+            </div>
+        </div>
+        <div>
+            <h4>align-content space-around</h4>
+            <div class="box20">
+                <div class="btn20">1</div>
+                <div class="btn20">2</div>
+                <div class="btn20">3</div>
+                <div class="btn20">1</div>
+                <div class="btn20">2</div>
+                <div class="btn20">3</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
